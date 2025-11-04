@@ -36,6 +36,7 @@
             label3 = new Label();
             txtbAlbum = new TextBox();
             label4 = new Label();
+            btnLoadImage = new Button();
             SuspendLayout();
             // 
             // txtbTitle
@@ -103,11 +104,22 @@
             label4.TabIndex = 1;
             label4.Text = "Álbum";
             // 
+            // btnLoadImage
+            // 
+            btnLoadImage.Location = new Point(293, 341);
+            btnLoadImage.Name = "btnLoadImage";
+            btnLoadImage.Size = new Size(309, 65);
+            btnLoadImage.TabIndex = 2;
+            btnLoadImage.Text = "Cargar Imagen";
+            btnLoadImage.UseVisualStyleBackColor = true;
+            btnLoadImage.Click += btnLoadImage_Click;
+            // 
             // FormAgregar
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 406);
+            ClientSize = new Size(828, 541);
+            Controls.Add(btnLoadImage);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -132,5 +144,6 @@
         private Label label3;
         private TextBox txtbAlbum;
         private Label label4;
+        private Button btnLoadImage;
     }
 }

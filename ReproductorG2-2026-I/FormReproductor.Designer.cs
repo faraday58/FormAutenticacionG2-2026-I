@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lstbPlayList = new ListBox();
-            pictureBox1 = new PictureBox();
+            ptbAlbum = new PictureBox();
             label1 = new Label();
             txtbTitle = new TextBox();
             label2 = new Label();
@@ -40,7 +40,7 @@
             archivoToolStripMenuItem = new ToolStripMenuItem();
             listaDeReproducciónToolStripMenuItem = new ToolStripMenuItem();
             agregarToolStripMenuItem = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbAlbum).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,13 +53,15 @@
             lstbPlayList.TabIndex = 0;
             lstbPlayList.SelectedIndexChanged += lstbPlayList_SelectedIndexChanged;
             // 
-            // pictureBox1
+            // ptbAlbum
             // 
-            pictureBox1.Location = new Point(1017, 161);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(344, 286);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            ptbAlbum.Image = Properties.Resources.takeonme;
+            ptbAlbum.Location = new Point(1046, 121);
+            ptbAlbum.Name = "ptbAlbum";
+            ptbAlbum.Size = new Size(344, 377);
+            ptbAlbum.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbAlbum.TabIndex = 1;
+            ptbAlbum.TabStop = false;
             // 
             // label1
             // 
@@ -138,7 +140,7 @@
             // agregarToolStripMenuItem
             // 
             agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            agregarToolStripMenuItem.Size = new Size(270, 34);
+            agregarToolStripMenuItem.Size = new Size(178, 34);
             agregarToolStripMenuItem.Text = "Agregar";
             agregarToolStripMenuItem.Click += agregarToolStripMenuItem_Click;
             // 
@@ -153,14 +155,14 @@
             Controls.Add(label2);
             Controls.Add(txtbTitle);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
+            Controls.Add(ptbAlbum);
             Controls.Add(lstbPlayList);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "FormReproductor";
             Text = "Reproductor";
             Load += FormReproductor_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbAlbum).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -170,7 +172,7 @@
         #endregion
 
         private ListBox lstbPlayList;
-        private PictureBox pictureBox1;
+        private PictureBox ptbAlbum;
         private Label label1;
         private TextBox txtbTitle;
         private Label label2;

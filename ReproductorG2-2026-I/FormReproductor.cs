@@ -15,9 +15,9 @@ namespace ReproductorG2_2026_I
         private void LoadMusicData()
         {
             // Aquí puedes cargar los datos de la música en el reproductor
-            playList.Add(new Musica("Desvelado", "Boby Pulido", "Desvelado"));
-            playList.Add(new Musica("Viento", "Caifanes", "Caifanes"));
-            playList.Add(new Musica("Take On Me", "A-Ha", "Hunting High and Low"));
+            playList.Add(new Musica("Desvelado", "Boby Pulido", "Desvelado",@"..\..\..\Resources\desvelado.jpeg"));
+            playList.Add(new Musica("Viento", "Caifanes", "Caifanes", @"..\..\..\Resources\caifanes.jpeg"));
+            playList.Add(new Musica("Take On Me", "A-Ha", "Hunting High and Low", @"..\..\..\Resources\takeonme.jpeg"));
         }
 
         private void AddMusicToPlaylist(Musica musica)
@@ -39,6 +39,7 @@ namespace ReproductorG2_2026_I
             txtbTitle.Text = playList[lstbPlayList.SelectedIndex].Title;
             txtbArtist.Text = playList[lstbPlayList.SelectedIndex].Artist;
             txtbAlbum.Text = playList[lstbPlayList.SelectedIndex].Album;
+            ptbAlbum.Image = Image.FromFile(playList[lstbPlayList.SelectedIndex].FilePath);
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
