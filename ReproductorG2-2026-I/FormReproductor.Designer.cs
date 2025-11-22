@@ -57,6 +57,8 @@
             lbFinalTime = new Label();
             pgbTime = new ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
+            topMusicToolStripMenuItem = new ToolStripMenuItem();
+            verToolStripMenuItem = new ToolStripMenuItem();
             cMenuStripReproductor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbAlbum).BeginInit();
             menuStrip1.SuspendLayout();
@@ -149,7 +151,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, listaDeReproducciónToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, listaDeReproducciónToolStripMenuItem, topMusicToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1568, 33);
@@ -263,6 +265,20 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // topMusicToolStripMenuItem
+            // 
+            topMusicToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verToolStripMenuItem });
+            topMusicToolStripMenuItem.Name = "topMusicToolStripMenuItem";
+            topMusicToolStripMenuItem.Size = new Size(108, 29);
+            topMusicToolStripMenuItem.Text = "Top Music";
+            // 
+            // verToolStripMenuItem
+            // 
+            verToolStripMenuItem.Name = "verToolStripMenuItem";
+            verToolStripMenuItem.Size = new Size(270, 34);
+            verToolStripMenuItem.Text = "Ver";
+            verToolStripMenuItem.Click += verToolStripMenuItem_Click;
+            // 
             // FormReproductor
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -324,5 +340,7 @@
         private ContextMenuStrip cMenuStripReproductor;
         private ToolStripMenuItem guardarListaDeReproducciónToolStripMenuItem;
         private ToolStripMenuItem importarToolStripMenuItem;
+        private ToolStripMenuItem topMusicToolStripMenuItem;
+        private ToolStripMenuItem verToolStripMenuItem;
     }
 }

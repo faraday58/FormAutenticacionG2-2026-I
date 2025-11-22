@@ -109,7 +109,7 @@ namespace ReproductorG2_2026_I
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Archivos de texto|*.txt|Archivos separados por ','| .csv";
-            if(ofd.ShowDialog() == DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
                 StreamReader reader = null;
                 try
@@ -149,13 +149,19 @@ namespace ReproductorG2_2026_I
                 finally
                 {
                     reader?.Close();
-                }   
+                }
 
 
             }
 
 
 
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTopMusic formTopMusic = new FormTopMusic();
+            formTopMusic.ShowDialog();
         }
     }
 }
